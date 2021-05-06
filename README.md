@@ -1,10 +1,12 @@
 # Optical_DL_Optimized
 This repository is an optimized version of the Optical model for Motor Imagery Classification tasks.
-Specifically, the Deep Learning portion of the model has been modified, and Bayesian Optimization has been used to adjust the hyperparameters of the new model to the patient data.
-Overall, the test accuracy has increased from 70% to 95% through these optimizations. Additional details and metrics inluding model precision, recall and computation time may be found in the following command line outputs. The demonstration was run in MATLAB 2020a the dual core i5-3320M @2.6GHz.
 
-The output of the unmodefied model:
+Specifically, the Deep Learning portion of the model has been modified, and Bayesian Optimization has been used to adjust the hyperparameters of the new model to the subject data.
 
+Overall, the test accuracy has increased from 70% to 95% through these optimizations. Additional details and metrics inluding model precision, recall and computation time may be found in the following command line outputs. The demonstration was run in MATLAB 2020a on the dual core i5-3320M @2.60GHz.
+
+The output of the unmodified model
+```
 |===============================================================================================================|
 | Iter | Active  | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | InitialLearn-| L2Regulariza-|
 |      | workers | result |             | runtime     | (observed)  | (estim.)    | Rate         | tion         |
@@ -41,11 +43,12 @@ Estimated function evaluation time = 113.4691
 
 Accuracy on train data is 89.44%
 Accuracy on test data is 70.00%
-
-
+```
 
 This is the output after modifying the Deep Learning Network
 
+(precision and recall were added to check model validity)
+```
 |===============================================================================================================|
 | Iter | Active  | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | InitialLearn-| L2Regulariza-|
 |      | workers | result |             | runtime     | (observed)  | (estim.)    | Rate         | tion         |
@@ -82,11 +85,11 @@ Accuracy on train data is 90.56%
 Accuracy on test data is 90.00%
 Precision on test data is 83.00%
 Recall on test data is 100%
-
+```
 
 
 This is the output after Bayesian Optimization was applied to the Deep Learning Network
-
+```
 |==============================================================================================================================|
 | Iter | Active  | Eval   | Objective   | Objective   | BestSoFar   | BestSoFar   | InitialLearn-| L2Regulariza-| numHiddenUni-|
 |      | workers | result |             | runtime     | (observed)  | (estim.)    | Rate         | tion         | ts1          |
@@ -124,10 +127,13 @@ Accuracy on train data is 95.00%
 Accuracy on test data is 95.00%
 Precision on test data is 100.00%
 Recall on test data is 90.00%
+```
 
 
 
 ![image](https://user-images.githubusercontent.com/50681161/117360071-55025900-ae86-11eb-93d5-51706965d0a0.png)
+
 This is a diagram of the model from the original paper.
+
 Kumar, S., Sharma, A. & Tsunoda, T. Brain wave classification using long short-term memory network based OPTICAL predictor. Sci Rep 9, 9153 (2019). https://doi.org/10.1038/s41598-019-45605-1
 
