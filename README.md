@@ -128,8 +128,7 @@ Accuracy on test data is 95.00%
 Precision on test data is 100.00%
 Recall on test data is 90.00%
 ```
-
-
+For practical use, I recommend increasing the 'MaxTime' and/or using more powerful hardware to allow the Bayesian Optimization to find a stronger model.
 
 ![image](https://user-images.githubusercontent.com/50681161/117360071-55025900-ae86-11eb-93d5-51706965d0a0.png)
 
